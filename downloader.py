@@ -27,7 +27,7 @@ class Downloader:
             out = video.download(path)
 
             # Edit the extension
-            base, ext = os.path.splitext(os)
+            base = out[:len(out)-4]
             os.rename(out, base + '.mp3')
 
         return 1
